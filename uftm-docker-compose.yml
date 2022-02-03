@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  uftm:
+    image: mobilelifecycle/uft-mobile
+    ports:
+      - 8080:8080
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P@ssw0rd
+    volumes:
+      - uftm_data:/opt/uftm/mcStorage
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=P@ssw0rd
+
+volumes:
+  uftm_data:
