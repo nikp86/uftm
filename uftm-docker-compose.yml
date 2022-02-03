@@ -14,7 +14,7 @@ services:
       FQDN: uft-mobile
     volumes:
       - uftm_data:/opt/uftm/mcStorage
-    network_mode: host
+    network_mode: "host"
     depends_on:
       - postgres
 
@@ -24,8 +24,7 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=P@ssw0rd
-    network_mode: host
+    network_mode: "host"
 
 volumes:
   uftm_data:
-
