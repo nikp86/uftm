@@ -13,6 +13,8 @@ services:
       POSTGRES_PASSWORD: P@ssw0rd
     volumes:
       - uftm_data:/opt/uftm/mcStorage
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:latest
