@@ -2,11 +2,16 @@
 Docker-compose file for up and running the latest version of UFT Mobile
 https://hub.docker.com/r/mobilelifecycle/uft-mobile
 
-Steps to launch:
+Usage:
 1. git clone https://github.com/nikolaypeshev86/uftm.git
-2. docker-compose up -d
+2. cd uftm
+3. docker-compose up -d
 
-Access to the UFT Mobile server: http://localhost:8080
+---------------------------------------------
+
+Access to the UFT Mobile:
+
+URL: http://localhost:8080
 
 username: admin@default.com
 
