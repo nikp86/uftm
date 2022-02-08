@@ -3,6 +3,8 @@ version: '3'
 services:
 
   uftm:
+    depends_on:
+      - postgres
     image: mobilelifecycle/uft-mobile
     ports:
       - 8080:8080
@@ -12,8 +14,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: P@ssw0rd
       FQDN: uft-mobile
-    depends_on:
-      - postgres
 
   postgres:
     image: postgres:11.7
