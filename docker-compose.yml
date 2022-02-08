@@ -12,8 +12,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: P@ssw0rd
       FQDN: uft-mobile
-    volumes:
-      - uftm_data:/opt/uftm/mcStorage
     depends_on:
       - postgres
 
@@ -23,6 +21,3 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD=P@ssw0rd
-    
-volumes:
-  uftm_data:
