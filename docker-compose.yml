@@ -5,7 +5,7 @@ services:
   uftm:
     depends_on:
       - postgres
-    image: mobilelifecycle/uft-mobile
+    image: mobilelifecycle/uft-digitallab
     ports:
       - 8080:8080
     environment:
